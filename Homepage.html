@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lamg="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="homepage.css">
+    <title>Homepage</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+     body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .top-nav {
+            background-color: #800000;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .top-nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .top-nav a:hover {
+            text-decoration: underline;
+        }
+        .main-nav {
+            background-color: white;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .main-nav a {
+            color: #333;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .main-nav a:hover {
+            text-decoration: underline;
+        }
+        .main-nav .logo {
+          display:inline-flex;
+          position: absolute;
+          top: 0;
+          left: 0;         
+        }
+        .main-nav .logo img {
+            height: 70px;
+        }
+        .main-nav .give-button {
+            border: 1px solid #800000;
+            padding: 5px 10px;
+            color: #800000;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .main-nav .give-button:hover {
+            background-color: #800000;
+            color: white;
+        }
+        .main-banner {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .main-banner img {
+            margin-top: 56%;
+            width: 100%;
+            height: 60%;
+        }
+        .main-banner .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4em;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1em;
+            text-transform: uppercase;
+        }
+        .main-banner .buttons {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .main-banner .buttons a {
+            background-color: #800000;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 5px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .latest-news {
+            text-align: center;
+            padding: 20px;
+        }
+        .latest-news h2 {
+            margin: 20px 0;
+        }
+        .news-items {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .news-item {
+            background-color: #003366;
+            color: white;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+        }
+        .news-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .news-item a {
+            color: white;
+            text-decoration: none;
+        }
+
+    
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 450px;
+        }
+        .section {
+            margin: 10px 10px;
+        }
+        .section .box {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .section img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .section img:hover {
+            transform: scale(1.05);
+        }
+        .section h1 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .section p {
+            font-size: 14px;
+            margin: 10px 0;
+            
+
+        }
+        .section a {
+            color: #800000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .section a:hover {
+            text-decoration: underline;
+        }
+        .three-columns {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .three-columns .column {
+            width: 30%;
+        }
+        .two-columns {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .two-columns .column {
+            width: 45%;
+        }
+        .four-columns {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .four-columns .column {
+            width: 22%;
+        }
+        .events {
+            background-color: #f5f5f5;
+            padding: 20px 0;
+        }
+        .events h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .events .event {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ddd;
+        }
+        .events .event h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .events .event p {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .events .event a {
+            color: #800000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .events .event a:hover {
+            text-decoration: underline;
+        }
+        .button {
+            background-color:#800000;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px 0;
+            display: inline-block;
+        }
+        .button:hover {
+            background-color: darkred;
+        }
+
+        .footer {
+            background-color: #333;
+            padding: 20px 0;
+        }
+        .footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .footer .left, .footer .center, .footer .right {
+            flex: 1;
+        }
+        .footer .left {
+            display: flex;
+            align-items: flex-start;
+        }
+        .footer .left img {
+            max-width: 100px;
+            margin-right: 20px;
+        }
+        .footer .left div {
+            text-align: left;
+        }
+        .footer .left p {
+            margin: 5px 0;
+            color: #fff;
+        }
+        .footer .center, .footer .right {
+            text-align: left;
+        }
+        .footer .center a, .footer .right a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+        .footer .center a:hover, .footer .right a:hover {
+            text-decoration: underline;
+        }
+        .footer .social-icons {
+            margin-top: 10px;
+        }
+        .footer .social-icons i {
+            margin: 0 5px;
+            font-size: 20px;
+            color: #fff;
+        }
+        .footer .bottom {
+            background-color: #222;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 20px;
+            color: #fff;
+        }
+
+  </style>
+
+</head>
+<body>
+    <div class="top-nav">
+        <a href="#">
+         NEWS
+        </a>
+        <a href="#">
+         EVENTS
+        </a>
+        <a href="#">
+         CAREERS
+        </a>
+        <a href="#">
+         INFO FOR
+         <i class="fas fa-caret-down">
+         </i>
+        </a>
+        <a href="#">
+         VISIT
+        </a>
+        <a href="#">
+         CONTACT US
+        </a>
+        <a href="#">
+         DIRECTORY
+        </a>
+        <a href="#">
+         <i class="fas fa-search">
+         </i>
+        </a>
+       </div>
+       <div class="main-nav">
+        <a class="logo" href="#">
+         <img alt="Educare logo" src="C:\Users\saheb\OneDrive\Desktop\Educare\logo2.jpg"/>
+        </a>
+        <a href="#">
+         WHO WE ARE
+        </a>
+        <a href="#">
+         EDUCATION &amp; RESEARCH
+        </a>
+        <a href="#">
+         ADMISSIONS
+        </a>
+        <a href="#">
+         ACHIEVEMENTS
+        </a>
+        <a href="#">
+         POLICIES
+        </a>
+        <a class="give-button" href="#">
+         SIGN UP
+        </a>
+       </div>
+      </body>
+     </html>
+     
+     
+
+  <section class="showcase">
+    <header>
+      <h2 class="logo">Educare</h2>
+      <div class="toggle"></div>
+    </header>
+    <video src="C:\Users\saheb\OneDrive\Desktop\Educare\educare.mp4" muted loop autoplay></video>
+    <div class="text">
+      <h2>Never Stop</h2> 
+      <h3>Exploring Wisdom</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.</p>
+      <a href="#">Explore</a>
+    </div>
+    <ul class="social">
+      <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+      <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+      <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+    </ul>
+  </section>
+  <div class="menu">
+    <ul>
+      <li><a href="#">Alumini</a></li>
+      <li><a href="#">Departments</a></li>
+      <li><a href="#">Student Articles</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+  </div>
+
+  <div class="main-banner">
+    <img alt="Researchers in a field" height="200" src="C:\Users\saheb\OneDrive\Desktop\Educare\pexels-yankrukov-8199557.jpg" width="600"/>
+    <div class="banner-text">
+     Field-defining scholarship
+    </div>
+    <div class="buttons">
+     <a href="#">
+      HOW TO APPLY
+     </a>
+     <a href="#">
+      CONTACT US
+     </a>
+     <a href="#">
+      VISIT OUR CAMPUS
+     </a>
+    </div>
+   </div>
+   <div class="latest-news">
+    <h2>
+     LATEST NEWS
+    </h2>
+    <div class="news-items">
+     <div class="news-item">
+      <img alt="Conference room with people" height="100" src="https://storage.googleapis.com/a1aa/image/kBIyQyjAPzrvM1Hkx22AHCk1jazPayrNt2X2t3A9qLJCOe1JA.jpg" width="200"/>
+      <a href="#">
+       AE 2024 Chicago Quantum Summit, leaders temper hype, hail momentum of global quantum effort
+      </a>
+      <p>
+       Source: UChicago News
+      </p>
+     </div>
+     <div class="news-item">
+      <img alt="Renowned artist Pope" height="100" src="https://storage.googleapis.com/a1aa/image/BNTEdtOT9z7FKZL2gp8p3q630ppkKXPbWNzRQemPBIwBc81JA.jpg" width="200"/>
+      <a href="#">
+       UChicago to host celebration of renowned artist Pope
+      </a>
+      <p>
+       Source: UChicago News
+      </p>
+     </div>
+     <div class="news-item">
+      <img alt="Art exhibit" height="100" src="https://storage.googleapis.com/a1aa/image/wMrVMGTFu0arK5trFyBpdslsaVupeUsuuT268us8cWBBc81JA.jpg" width="200"/>
+      <a href="#">
+       Smart Museum celebrates 50 years of examining the world through art
+      </a>
+      <p>
+       Source: UChicago News
+      </p>
+     </div>
+     <div class="news-item">
+      <img alt="Doctor in front of ambulance" height="100" src="https://storage.googleapis.com/a1aa/image/7HgPiveuBpSJWyhUzOhFXgKh1olD8ebVOT09P9eCfMxWgjvOB.jpg" width="200"/>
+      <a href="#">
+       Selwyn Rogers elected to National Academy of Medicine
+      </a>
+      <p>
+       Source: UChicago News
+      </p>
+     </div>
+    </div>
+   </div>
+
+
+   <div class="header">
+    WE ADVANCE IDEAS AND HUMANITY
+   </div>
+   <div class="three-columns section">
+    <div class="column">
+     <div class="box">
+      <img alt="Image of a person reading a book in a library" height="200" src="https://storage.googleapis.com/a1aa/image/ViUxYuZex7UYCahrfd19jtqJAoWhhiKKBhlOjfpetnqw0ovOB.jpg" width="300"/>
+      <h3>
+       Intellectual freedom
+      </h3>
+      <p>
+       Promoting and protecting intellectual freedom and access to information.
+      </p>
+      <a href="#">
+       LEARN MORE &gt;
+      </a>
+     </div>
+    </div>
+    <div class="column">
+     <div class="box">
+      <img alt="Image of a community gathering" height="200" src="https://storage.googleapis.com/a1aa/image/E9CuPGpj1PIPHhRkRlNWGQmO1p4ePrhT6PrVF1QC9AynG91JA.jpg" width="300"/>
+      <h3>
+       Community impact
+      </h3>
+      <p>
+       Engaging with and serving the Chicago South Side community.
+      </p>
+      <a href="#">
+       LEARN MORE &gt;
+      </a>
+     </div>
+    </div>
+    <div class="column">
+     <div class="box">
+      <img alt="Image of a scenic landscape" height="200" src="https://storage.googleapis.com/a1aa/image/X9JdT6fBHWVfH0jOLhHRx1x378YT3jp2WbtijbeftRFl0ovOB.jpg" width="300"/>
+      <h3>
+       Global impact
+      </h3>
+      <p>
+       Collaborating with international partners to address global educational challenges.
+      </p>
+      <a href="#">
+       LEARN MORE &gt;
+      </a>
+     </div>
+    </div>
+   </div>
+   <div class="section">
+    <div class="box">
+     <div class="two-columns">
+      <div class="column">
+       <h1>
+        We welcome all
+       </h1>
+       <p>
+        Only through different cultures, experiences, and perspectives can we meet the challenges of our increasingly complex world. We are committed to creating an inclusive environment where everyone feels welcome and valued.
+       </p>
+       <a href="#">
+        LEARN MORE &gt;
+       </a>
+      </div>
+      <div class="column">
+       <img alt="Image of a diverse group of people interacting" height="300" src="https://storage.googleapis.com/a1aa/image/mA7qMzU0WGKIHBESvAIpq054vCY9f2wwTjkKpJe6BZNIN6rTA.jpg" width="600"/>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="section">
+    <div class="box">
+     <h3>
+      We call Educare Home
+     </h3>
+     <p>
+      India is our city and our canvas. We embrace the fabric of this vibrant city and are located in the South Bengaluru neighborhood, known for its diversity, arts, and cultural richness.
+     </p>
+     <a href="#">
+      LEARN MORE &gt;
+     </a>
+    </div>
+   </div>
+   <div class="four-columns section">
+    <div class="column">
+     <div class="box">
+      <img alt="Image of Chicago skyline" height="200" src="https://storage.googleapis.com/a1aa/image/JXlSp8F90xJLNZGg18RrZWoQGeF0q4ayN44kPOUxIOyoG91JA.jpg" width="200"/>
+     </div>
+    </div>
+    <div class="column">
+     <div class="box">
+      <img alt="Image of a person in a hat" height="200" src="https://storage.googleapis.com/a1aa/image/5DBNzOtRycY1NhdgZhrhtSrhCepnqbaxToatDdhfDoaNN6rTA.jpg" width="200"/>
+     </div>
+    </div>
+    <div class="column">
+     <div class="box">
+      <img alt="Image of a festive event" height="200" src="https://storage.googleapis.com/a1aa/image/BV2VQsWUrErLN1L5eXVZjwOSpyFikI4KHykGyekhJMeWa0XnA.jpg" width="200"/>
+     </div>
+    </div>
+    <div class="column">
+     <div class="box">
+      <img alt="Image of people enjoying a park" height="200" src="https://storage.googleapis.com/a1aa/image/NZkGVCuOiZZQJdUsOtiDEeYiyZHveCtfdpQBhbfiueR4oRf6E.jpg" width="200"/>
+     </div>
+    </div>
+   </div>
+   <div class="events section">
+    <h2>
+     EVENTS
+    </h2>
+    <div class="four-columns">
+     <div class="column event">
+      <div class="box">
+       <h3>
+        Oct 29
+       </h3>
+       <p>
+        2023 Fall Festival
+       </p>
+       <p>
+        Join us for a celebration of the fall season with food, music, and activities for all ages.
+       </p>
+       <a href="#">
+        LEARN MORE &gt;
+       </a>
+      </div>
+     </div>
+     <div class="column event">
+      <div class="box">
+       <h3>
+        Oct 30
+       </h3>
+       <p>
+        Community Workshop
+       </p>
+       <p>
+        Participate in our workshop to learn new skills and meet other community members.
+       </p>
+       <a href="#">
+        LEARN MORE &gt;
+       </a>
+      </div>
+     </div>
+     <div class="column event">
+      <div class="box">
+       <h3>
+        Oct 31
+       </h3>
+       <p>
+        Diwali Night
+       </p>
+       <p>
+        Dress up in your favoriteethmic wear and join us for the festival of lights.
+       </p>
+       <a href="#">
+        LEARN MORE &gt;
+       </a>
+      </div>
+     </div>
+     <div class="column event">
+      <div class="box">
+       <h3>
+        Nov 1
+       </h3>
+       <p>
+        Tech Exhibition
+       </p>
+       <p>
+        Explore the latest works from tech enthusiasts at our annual tech exhibition 2024.
+       </p>
+       <a href="#">
+        LEARN MORE &gt;
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+   <a class="button" href="#">
+    SEE MORE EVENTS
+   </a>
+   <div class="footer">
+    <div class="container">
+     <div class="left">
+      <img alt="EducareLogo" height="100" src="C:\Users\saheb\OneDrive\Desktop\Educare\logo2.jpg" width="100"/>
+      <div>
+       <p>
+        Educare 
+       </p>
+       <p>
+        Lalit H. Road 1st Stage
+       </p>
+       <p>
+        560085 Banashankari
+       </p>
+       <p>
+        Bengaluru, India
+       </p>
+      </div>
+     </div>
+     <div class="center">
+      <a href="#">
+       Title IX
+      </a>
+      <a href="#">
+       Non-Discrimination Statement
+      </a>
+      <a href="#">
+       Accreditation/IHHE Resolution
+      </a>
+      <a href="#">
+       Emergency Info
+      </a>
+      <a href="#">
+       Job Opportunities
+      </a>
+      <a href="#">
+       Make A Gift
+      </a>
+      <a href="#">
+       Accessibility
+      </a>
+      <a href="#">
+       Privacy
+      </a>
+     </div>
+     <div class="right">
+      <a href="#">
+       Visit Departments
+      </a>
+      <a href="#">
+       Campus Directory
+      </a>
+      <a href="#">
+       Contact Us
+      </a>
+      <a href="#">
+       Maps &amp; Directions
+      </a>
+      <a href="#">
+       My Edufair
+      </a>
+      <a href="#">
+       Office365
+      </a>
+      <a href="#">
+       A-Z Listing
+      </a>
+      <div class="social-icons">
+       <i class="fab fa-facebook-f">
+       </i>
+       <i class="fab fa-instagram">
+       </i>
+       <i class="fab fa-linkedin-in">
+       </i>
+       <i class="fab fa-xing">
+       </i>
+       <i class="fab fa-youtube">
+       </i>
+      </div>
+     </div>
+    </div>
+    <div class="bottom">
+     <p>
+      ©2024 Educare Solutions pvt. lmt.
+     </p>
+    </div> 
+   </div>
+  
+
+  <script>
+    const menuToggle = document.querySelector('.toggle');
+     const showcase = document.querySelector('.showcase');
+
+     menuToggle.addEventListener('click', () => {
+       menuToggle.classList.toggle('active');
+       showcase.classList.toggle('active');
+     })
+ </script>
+  </body>
+  </html>
+
+
+  
